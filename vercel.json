@@ -1,14 +1,16 @@
 {
   "version": 2,
   "builds": [
-    { "src": "index.js", "use": "@vercel/node" }
+    {
+      "src": "index.js",
+      "use": "@vercel/node"
+    }
   ],
   "routes": [
+    { "src": "/qr", "dest": "index.js" },
+    { "src": "/code", "dest": "index.js" },
+    { "src": "/qrweb", "dest": "index.js" },
+    { "src": "/pair", "dest": "index.js" },
     { "src": "/(.*)", "dest": "index.js" }
-  ],
-  "files": [
-    "qr.html",
-    "pair.html",
-    "main.html"
   ]
 }
