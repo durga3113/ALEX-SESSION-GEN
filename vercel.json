@@ -11,6 +11,6 @@
     { "src": "/code", "dest": "index.js" },
     { "src": "/qrweb", "dest": "index.js" },
     { "src": "/pair", "dest": "index.js" },
-    { "src": "/(.*)", "dest": "index.js" }
+    { "src": "/", "dest": "index.js" }
   ]
 }
