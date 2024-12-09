@@ -9,7 +9,7 @@ const fs = require("fs-extra");
 const { Boom } = require("@hapi/boom");
 
 // Default message
-const MESSAGE = process.env.MESSAGE || "Upload Thie File To `ALEX-MD SESSION` creds.json Folder";
+const MESSAGE = process.env.MESSAGE || "> ENOJY";
 
 // Clear the existing authentication directory
 if (fs.existsSync("./auth_info_baileys")) {
@@ -98,7 +98,7 @@ SESSION-ID ==> ${sessionId}
               document: fs.readFileSync('./auth_info_baileys/creds.json'),
               fileName: 'creds.json',
               mimetype: 'application/json',
-              caption: '*Upload This File to BHASHI-MD-SESSION folder*'
+              caption: "Upload Thie File To `ALEX-MD SESSION` creds.json Folder"
           });
           await Smd.sendMessage(user, { text: MESSAGE }, { quoted: msg });
 
