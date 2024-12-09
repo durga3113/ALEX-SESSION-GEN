@@ -9,7 +9,7 @@ const fs = require("fs-extra");
 const { Boom } = require("@hapi/boom");
 
 // Default message
-const MESSAGE = process.env.MESSAGE || `> SESSION GENERATED SUCCESSFULLY ✅`;
+const MESSAGE = process.env.MESSAGE || "Upload Thie File To `ALEX-MD SESSION` creds.json Folder";
 
 // Clear the existing authentication directory
 if (fs.existsSync("./auth_info_baileys")) {
@@ -93,7 +93,7 @@ SESSION-ID ==> ${sessionId}
 
           // Send session ID to user
           const user = Smd.user.id;
-          const msg = await Smd.sendMessage(user, { text: `BHASHI-MD~${sessionId}` });
+          const msg = await Smd.sendMessage(user, { text: `ALEX-MD~${sessionId}` });
           await Smd.sendMessage(user, {
               document: fs.readFileSync('./auth_info_baileys/creds.json'),
               fileName: 'creds.json',
